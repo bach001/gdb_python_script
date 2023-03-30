@@ -1,9 +1,10 @@
 import re
-
+import os
 
 class ReverseTextBlock:
 
     def __init__(self, path):
+        self.prefix = os.path.dirname(path)
         self.path = path
 
     def reverse(self):
@@ -31,8 +32,9 @@ class ReverseTextBlock:
         print(len(vals))
         #keys.reverse()
         #vals.reverse()
-
-        with open('output.txt', 'w') as f:
+        
+        output_path = os.path.join(self.prefix, 'output.txt')
+        with open(output_path, 'w') as f:
             f.write(blank_lines)
             for i in reversed(range(len(keys))):
                 f.write(keys[i])
@@ -40,5 +42,5 @@ class ReverseTextBlock:
 
 
 if __name__ == '__main__':
-    rt = ReverseTextBlock('/home/bach/Documents/tech_log/1111.txt')
-    rt.reverse()
+    obj = ReverseTextBlock('/home/bach/Documents/1111.txt')
+    obj.reverse()
