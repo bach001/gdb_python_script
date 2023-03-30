@@ -1,3 +1,3 @@
-# gdb_python_script
+# python script
 
-write a simple python script to search local gcc files on arch linux
+various python scripts written for personal use
