@@ -29,12 +29,12 @@ class ReverseTextBlock:
 
         print(len(keys))
         print(len(vals))
-        keys.reverse()
-        vals.reverse()
+        #keys.reverse()
+        #vals.reverse()
 
         with open('output.txt', 'w') as f:
             f.write(blank_lines)
-            for i in range(len(keys)):
+            for i in reversed(range(len(keys))):
                 f.write(keys[i])
                 f.write(vals[i])
 
